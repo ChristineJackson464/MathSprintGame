@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="webicon_logo.png">
+    <link rel="stylesheet" href="style.css" />
+    <title>Math Sprint Game</title>
+  </head>
+  <body>
+    <div class="game-container">
+      <!-- HEADER -->
+      <div class="header">
+        <h1>Math Sprint Game</h1>
+      </div>
+
+      <!-- SPLASH PAGE -->
+      <div class="card" id="splash-page">
+        <form id="start-form">
+          <div class="selection-container">
+            <!-- 10 QUESTION RADIO INPUT -->
+            <div class="radio-container">
+              <label for="value-10">10 Questions</label>
+              <input type="radio" name="questions" value="10" id="value-10">
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+            <!-- 25 QUESTION RADIO INPUT -->
+            <div class="radio-container">
+              <label for="value-25">25 Questions</label>
+              <input type="radio" name="questions" value="25" id="value-25">
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+            <!-- 50 QUESTION RADIO INPUT -->
+            <div class="radio-container">
+              <label for="value-50">50 Questions</label>
+              <input type="radio" name="questions" value="50" id="value-50">
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+            <!-- 99 QUESTION RADIO INPUT -->
+            <div class="radio-container">
+              <label for="value-99">99 Questions</label>
+              <input type="radio" name="questions" value="99" id="value-99">
+              <span class="best-score">
+                <span>Best Score</span>
+                <span class="best-score-value"></span>
+              </span>
+            </div>
+          </div>
+          <!-- START BUTTON -->
+          <div class="selection-footer">
+            <button class="start" type="submit">Start Round</button>
+          </div>
+        </form>
+      </div> 
+
+      <!-- COUNTDOWN PAGE  -->
+      <div class="card" id="countdown-page" hidden>
+        <h1 class="countdown"></h1>
+      </div>
+
+      <!-- GAME PAGE -->
+      <div class="card" id="game-page" hidden>
+        <!-- ITEM CONTAINER -->
+        <div class="item-container"></div>
+        <!-- RIGHT/WRONG BUTTONS -->
+        <div class="item-footer">
+          <button class="wrong" onclick="select(false)">Wrong</button>
+          <button class="right" onclick="select(true)">Right</button>
+        </div>
+      </div>
+
+      <!-- SCORE PAGE -->
+      <div class="card" id="score-page" hidden>
+        <!-- SCORE CONTAINER -->
+        <div class="score-container">
+          <h1 class="title">Your Time</h1>
+          <h1 class="final-time"></h1>
+          <h1 class="base-time"></h1>
+          <h1 class="penalty-time"></h1>
+        </div>
+        <!-- PLAY AGAIN BTN -->
+        <div class="score-footer">
+          <button class="play-again" onclick="playAgain()" hidden>Play Again</button>
+        </div>
+      </div>
+    </div>
+    <script src="shuffle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
